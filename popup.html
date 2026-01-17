@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Explain Selection</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div style="width: 360px; padding: 12px; font-family: system-ui">
+      <h3 style="margin: 0 0 8px">Explain Selection</h3>
+
+      <label style="display: block; font-size: 12px; margin-top: 8px"
+        >OpenAI API Key</label
+      >
+      <input
+        id="apiKey"
+        type="password"
+        placeholder="sk-..."
+        style="width: 100%"
+      />
+
+      <div style="display: flex; gap: 8px; margin-top: 10px">
+        <button id="explainSelection" style="flex: 1">Explain selection</button>
+        <button id="clear" style="width: 80px">Clear</button>
+      </div>
+
+      <label style="display: block; font-size: 12px; margin-top: 10px"
+        >Or type text</label
+      >
+      <textarea
+        id="manualText"
+        rows="4"
+        style="width: 100%"
+        placeholder="Paste or type here..."
+      ></textarea>
+
+      <button id="explainManual" style="width: 100%; margin-top: 8px">
+        Explain typed text
+      </button>
+
+      <div
+        id="status"
+        style="margin-top: 10px; font-size: 12px; opacity: 0.8"
+      ></div>
+      <pre id="output" style="white-space: pre-wrap; margin-top: 8px"></pre>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
